@@ -1,0 +1,557 @@
+@font-face {
+  font-family: "MonumentExtended-Ultrabold";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/61488/MonumentExtended-Ultrabold.woff") format("woff"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/61488/MonumentExtended-Ultrabold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+html, body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  background: #e4bdff;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.slide-body {
+  width: 100%;
+  height: 100%;
+}
+
+.slide-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 1440px;
+  max-height: 100%;
+  min-width: 1440px;
+  min-height: 100%;
+  background: #e4bdff;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.container__base {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+
+.sign {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+
+.sign__svg {
+  width: 100%;
+  height: 100%;
+}
+
+.sign__txt {
+  font-family: "MonumentExtended-Ultrabold", sans-serif;
+  font-size: 80px;
+  line-height: 1;
+  fill: black;
+  letter-spacing: 2.1px;
+  padding-left: 10px;
+  padding-right: 2px;
+}
+
+.sign__txt-overlay {
+  fill: rgba(250, 250, 250, 0.6);
+}
+
+.int-wrap {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  background: #e4bdff;
+  align-items: center;
+}
+
+.int-mi-wrap {
+  border-radius: 50px;
+  background: #e4bdff;
+  box-shadow: 19px 19px 38px #b999cf, -19px -19px 38px #ffe1ff;
+  width: 700px;
+  height: 400px;
+}
+
+.int-ski-wrap {
+  border-radius: 50px;
+  background: #e4bdff;
+  box-shadow: 19px 19px 38px #b999cf, -19px -19px 38px #ffe1ff;
+  width: 700px;
+  height: 600px;
+}
+
+.tt {
+  font-size: 100px;
+  color: #70349B;
+}
+
+.mi-img img {
+  position: absolute;
+  height: 600px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  left: 1px;
+}
+
+.slide-wrap {
+  color: #212529;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #D0D5D9;
+  font-family: "Source Sans Pro", sans-serif;
+  transition: background-color 0.5s ease-in-out;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  height: 100%;
+}
+
+.Project-wrap {
+  box-sizing: border-box;
+  width: 1540px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.p1-txt {
+  color: black;
+  width: 100%;
+}
+
+.p3-txt {
+  color: black;
+  font-size: 100px;
+}
+
+.Canvas {
+  position: relative;
+  background-color: #FFFFFF;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 784px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  margin-top: 50px;
+}
+
+.Canvas-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  z-index: 20;
+}
+
+.Canvas-header-logo {
+  width: 62px;
+  height: 22px;
+  background: transparent url("/img/logo/Nayeye.gif") 0 0 no-repeat;
+  background-size: 62px 22px;
+}
+
+.Canvas-slides {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.Project {
+  padding-top: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+.Project-name,
+.Project-moto,
+.Project-link {
+  position: relative;
+  z-index: 3;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.Project-name {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 69px;
+  height: 80px;
+  font-style: italic;
+  text-transform: uppercase;
+}
+.Project-name small {
+  font-size: 34px;
+}
+
+.Project-moto {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+}
+.Project-moto + .Project-moto {
+  margin-left: 30px;
+  margin-bottom: 8px;
+}
+
+.Project-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 60px;
+}
+
+.Project-deco {
+  top: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.Project-image {
+  position: absolute;
+  top: 120px;
+  right: 5px;
+  z-index: 2;
+}
+
+.Project5 .swiper-slide {
+  color: #D0D5D9;
+}
+.Project5 .p5-wrap {
+  display: flex;
+}
+.Project5 .Project-image {
+  width: 512px;
+  height: 266px;
+  background: transparent url("https://image.ibb.co/cgiLOv/riva_clearcut.png") 0 0 no-repeat;
+  background-size: 512px 266px;
+}
+.Project5 .Project-deco {
+  width: 60px;
+  height: 100%;
+}
+.Project5 .Project-deco::before {
+  width: 60px;
+  height: 100%;
+  display: block;
+  content: "";
+  background: #D0D5D9;
+  transform: skewX(30deg);
+}
+.Project5 .Project-deco.one {
+  right: 40px;
+}
+.Project5 .Project-deco.two {
+  right: 130px;
+}
+.Project5 .Project-deco.three {
+  right: 220px;
+}
+
+.Project4 .Project-link {
+  color: #F2DA5E;
+}
+.Project4 .Project-image {
+  width: 499px;
+  height: 233px;
+  top: 140px;
+  background: transparent url("https://image.ibb.co/cgiLOv/riva_clearcut.png") 0 0 no-repeat;
+  background-size: 499px 233px;
+}
+.Project4 .Project-deco::before {
+  display: block;
+  content: "";
+  width: 190px;
+  height: 190px;
+  background: radial-gradient(circle at 111% -6%, #597389, #8babcd);
+  transform: rotate(45deg);
+}
+.Project4 .Project-deco.one {
+  width: 165px;
+  height: 165px;
+  top: 60px;
+  right: 200px;
+}
+.Project4 .Project-deco.two {
+  width: 162px;
+  height: 162px;
+  top: 200px;
+  right: 80px;
+}
+.Project4 .Project-deco.three {
+  width: 190px;
+  height: 190px;
+  top: 24px;
+  right: 24px;
+}
+
+.Project3 .Project-link {
+  color: #614ED9;
+}
+.Project3 .Project-image {
+  width: 499px;
+  height: 233px;
+  top: 140px;
+  background: transparent url("https://image.ibb.co/cgiLOv/riva_clearcut.png") 0 0 no-repeat;
+  background-size: 499px 233px;
+}
+.Project3 .Project-deco::before {
+  display: block;
+  content: "";
+  width: 190px;
+  height: 190px;
+  background: radial-gradient(circle at 111% -6%, #597389, #8babcd);
+  transform: rotate(45deg);
+}
+.Project3 .Project-deco.one {
+  width: 165px;
+  height: 165px;
+  top: 60px;
+  right: 200px;
+}
+.Project3 .Project-deco.two {
+  width: 162px;
+  height: 162px;
+  top: 200px;
+  right: 80px;
+}
+.Project3 .Project-deco.three {
+  width: 190px;
+  height: 190px;
+  top: 24px;
+  right: 24px;
+}
+
+.Project2 .Project-link {
+  color: #4174D9;
+}
+.Project2 .Project-image {
+  width: 499px;
+  height: 233px;
+  top: 140px;
+  background: transparent url("https://image.ibb.co/cgiLOv/riva_clearcut.png") 0 0 no-repeat;
+  background-size: 499px 233px;
+}
+.Project2 .Project-deco::before {
+  display: block;
+  content: "";
+  width: 190px;
+  height: 190px;
+  background: radial-gradient(circle at 111% -6%, #597389, #8babcd);
+  transform: rotate(45deg);
+}
+.Project2 .Project-deco.one {
+  width: 165px;
+  height: 165px;
+  top: 60px;
+  right: 200px;
+}
+.Project2 .Project-deco.two {
+  width: 162px;
+  height: 162px;
+  top: 200px;
+  right: 80px;
+}
+.Project2 .Project-deco.three {
+  width: 190px;
+  height: 190px;
+  top: 24px;
+  right: 24px;
+}
+
+.Project1 .Project-link {
+  color: #F2A7C3;
+}
+.Project1 .Project-image {
+  width: 499px;
+  height: 233px;
+  top: 140px;
+  background: transparent url("https://image.ibb.co/cgiLOv/riva_clearcut.png") 0 0 no-repeat;
+  background-size: 499px 233px;
+}
+.Project1 .Project-deco::before {
+  display: block;
+  content: "";
+  width: 190px;
+  height: 190px;
+  background: radial-gradient(circle at 111% -6%, #597389, #8babcd);
+  transform: rotate(45deg);
+}
+.Project1 .Project-deco.one {
+  width: 165px;
+  height: 165px;
+  top: 60px;
+  right: 200px;
+}
+.Project1 .Project-deco.two {
+  width: 162px;
+  height: 162px;
+  top: 200px;
+  right: 80px;
+}
+.Project1 .Project-deco.three {
+  width: 190px;
+  height: 190px;
+  top: 24px;
+  right: 24px;
+}
+
+.vid-wrap {
+  width: 600px;
+  height: 500px;
+  overflow: hidden;
+  background-size: contain;
+  background-position: center;
+}
+
+video {
+  background-size: cover;
+  overflow: hidden;
+}
+
+.tit-04 {
+  font-size: 150px;
+}
+
+.tit-co-bg {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/layered-waves-haikei.svg);
+  background-repeat: no-repeat;
+}
+
+.co-tx {
+  display: flex;
+  flex-direction: column;
+}
+
+.ti-p-04 {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.ti-wrap {
+  width: 800px;
+  height: 300px;
+  background-color: rgba(65, 116, 217, 0.3215686275);
+  border-radius: 30px;
+}
+
+.tit-bg {
+  background-size: contain;
+}
+
+.swiper-container-horizontal > .swiper-pagination-s {
+  bottom: 24px;
+  background: #EFF0F2;
+  border-radius: 3px;
+  width: auto;
+  left: 50%;
+  overflow: hidden;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.07);
+  border: solid 1px #E9ECEF;
+  transform: translateX(-50%);
+}
+.swiper-container-horizontal > .swiper-pagination-s .swiper-pagination-bullet {
+  background: none;
+  width: auto;
+  height: auto;
+  opacity: 1;
+  margin: 0;
+}
+.swiper-container-horizontal > .swiper-pagination-s .swiper-pagination-bullet::before {
+  display: block;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 700;
+  padding: 10px 30px;
+  color: #495057;
+  cursor: pointer;
+}
+.swiper-container-horizontal > .swiper-pagination-s .swiper-pagination-bullet:nth-child(1)::before {
+  content: "Project5";
+}
+.swiper-container-horizontal > .swiper-pagination-s .swiper-pagination-bullet:nth-child(2)::before {
+  content: "Project4";
+}
+.swiper-container-horizontal > .swiper-pagination-s .swiper-pagination-bullet:nth-child(3)::before {
+  content: "Project3";
+}
+.swiper-container-horizontal > .swiper-pagination-s .swiper-pagination-bullet:nth-child(4)::before {
+  content: "Project2";
+}
+.swiper-container-horizontal > .swiper-pagination-s .swiper-pagination-bullet:nth-child(5)::before {
+  content: "Project1";
+}
+.swiper-container-horizontal > .swiper-pagination-s .swiper-pagination-bullet.swiper-pagination-bullet-active::before {
+  background: #FFFFFF;
+}
