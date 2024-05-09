@@ -8,7 +8,61 @@
 //          },
 //        });
 
-       
+      
+const mySwiper = new Swiper('.mySwiper',{
+    direction: 'vertical',
+    slidesPerView: 1,
+    spaceBetween: 30,
+    debugger: true,
+    mousewheel: true,
+          grabCursor: true,
+          
+    pagination: {
+               el: '.swiper-pagination-f',
+                clickable: true,
+                mousewheel:true,
+               },
+               nested:true
+  })
+  
+
+
+
+
+
+
+const swiperS = new Swiper('.second', {
+    autoplay: 3000,
+    loop: true,
+    parallax: true,
+    pagination: '.swiper-pagination-s',
+    paginationClickable: true,
+    grabCursor: true,
+    speed: 1000,
+    mousewheel:true,
+    direction: "horizontal",
+    
+  
+    onTransitionStart(swiperS) {
+          if ($(".swiper-slide-active").hasClass(".swiper-slide")) {
+            $(".slide-body").siblings(".Project").css("background-color", "#6D889F");
+          } else {
+            $(".slide-body").siblings(".Project").css("background-color", "#E74824");
+          }
+                  //  if ($(".Project1 .swiper-slide-active").hasClass(".swiper-slide")) {
+                  //    $(".slide-body").css("background-color", "#dbe8ff");
+                  //  } else if ($(".Project2 .swiper-slide-active").hasClass(".swiper-slide")){
+                  //    $(".slide-body").css("background-color", "#ffcc41");
+                  //  } else if($(".Project3 .swiper-slide-active").hasClass(".swiper-slide")) {
+                  //    $(".slide-body").css("background-color", "#4346f3");
+                  //  }else if($(".Project4 .swiper-slide-active").hasClass(".swiper-slide")){
+                  //    $(".slide-body").css("background-color", "#6D889F");
+                  //  } else if ($(".Project5 .swiper-slide-active").hasClass(".swiper-slide")) {
+                  //    $(".slide-body").css("background-color", "#E74824");
+                  //  
+                }
+                 }
+               );
 
 
 
@@ -178,3 +232,7 @@ window.onload = () => {
     resize();
     // GSDevTools.create();
 };
+
+
+
+
