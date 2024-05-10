@@ -9,17 +9,21 @@
 //        });
 
       
-const mySwiper = new Swiper('.mySwiper',{
+const mySwiper = new Swiper('.mySwiper', {
     direction: 'vertical',
     slidesPerView: 1,
-    spaceBetween: 30,
+    spaceBetween: 0,
     debugger: true,
-    mousewheel: true,
-          grabCursor: true,
-          
-    pagination:  '.swiper-pagination-f',
-               nested:true
-  })
+    mousewheelControl: true,
+   
+    grabCursor: true,
+    
+    pagination: '.swiper-pagination-f',
+        // mousewheel:true,
+ 
+    paginationClickable: true,
+    nested: true
+})
   
 
 

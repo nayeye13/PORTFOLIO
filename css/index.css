@@ -150,6 +150,10 @@ body {
   height: 600px;
 }
 
+.dd {
+  position: absolute;
+}
+
 .tt {
   font-size: 100px;
   color: #70349B;
@@ -157,7 +161,7 @@ body {
 
 .mi-txt {
   width: 50%;
-  padding: 30px 0px 0px 20px;
+  padding: 30px px 0px 20px;
 }
 
 .mi-img img {
