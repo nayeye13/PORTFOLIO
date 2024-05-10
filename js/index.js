@@ -17,11 +17,7 @@ const mySwiper = new Swiper('.mySwiper',{
     mousewheel: true,
           grabCursor: true,
           
-    pagination: {
-               el: '.swiper-pagination-f',
-                clickable: true,
-                mousewheel:true,
-               },
+    pagination:  '.swiper-pagination-f',
                nested:true
   })
   
